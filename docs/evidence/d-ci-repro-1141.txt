@@ -41,7 +41,7 @@ test at test/unit/clock-change.test.js:8:1
   
   180 !== 120
   
-      at TestContext.<anonymous> (file:///Users/fyfar/projects/ai_training/ws12-d-repro/app/test/unit/clock-change.test.js:11:10)
+      at TestContext.<anonymous> (file:///<копія>/app/test/unit/clock-change.test.js:11:10)
       at Test.runInAsyncScope (node:async_hooks:226:14)
       at Test.run (node:internal/test_runner/test:1201:25)
       at Test.start (node:internal/test_runner/test:1096:17)

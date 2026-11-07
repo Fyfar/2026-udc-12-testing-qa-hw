@@ -40,7 +40,7 @@ const cases = [
     expected: { timeCharge: 125000, hourly: 30000, fees: 200000, total: 230000 } },
   { id: "TC-52", rule: "T8 (+T7)", title: "25 год, X03 — обидва збори незалежно",
     rider: STANDARD, ride: ride("2026-09-16T10:00:00+03:00", "2026-09-17T11:00:00+03:00", { station: "X03" }),
-    expected: { hourly: 30000, fees: 215000, total: 245000 } },
+    expected: { hourly: 30000, fees: 215000, feeAmounts: [15000, 200000], total: 245000 } },
   { id: "TC-53", rule: "T8 (+T5)", title: "пільговий, електро, 25 год — збір T8 без знижки",
     rider: REDUCED, ride: ride("2026-09-16T10:00:00+03:00", "2026-09-17T11:00:00+03:00", { bike: "ebike" }),
     expected: { timeCharge: 200000, hourly: 30000, fees: 200000, total: 230000 } },

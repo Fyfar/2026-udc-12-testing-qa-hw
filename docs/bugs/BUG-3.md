@@ -53,7 +53,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   "fees": [],
   "total": 0
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -95,7 +95,7 @@ node -e 'import("./app/src/tariff.js").then(({ quote }) => console.log(JSON.stri
 - **Тест «з коду», що закріпив дефект:** `ai-runs/b1-from-code/tariff.test.js › e-bike over the free
   period gets 20% off`. На `main` він зелений (`ai-runs/b1-run.txt:33`), після виправлення червоний
   (`ai-runs/b1-rerun.txt:33`).
-- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:37` —
+- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:37` (на `d373a24`) —
   «subscribers ride the first 45 minutes free» (для обох типів велосипеда 40 хв → 0). У коміті
   `d373a24` його перейменовано на «subscribers ride the first 45 minutes free on a classic bike only»:
   для електро 40 хв тепер очікується 6 400 коп. (2 блоки 8 000 − 20 %) за T4 (`:74-77`).

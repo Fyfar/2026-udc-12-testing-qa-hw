@@ -36,7 +36,7 @@ npm notice run node --test "test/**/*.test.js"
 test at test/integration/receipt.test.js:11:1
 ✖ every receipt of a week of rides ends with the amount due (…ms)
   AssertionError [ERR_ASSERTION]: ebike, 60 min from 2026-09-21T15:38:00.000Z: got "До сплати .......................... 80,00 грн", expected 120,00 грн
-      at TestContext.<anonymous> (file:///Users/fyfar/projects/ai_training/ws12-d-repro/app/test/integration/receipt.test.js:20:12)
+      at TestContext.<anonymous> (file:///<копія>/app/test/integration/receipt.test.js:20:12)
       at Test.runInAsyncScope (node:async_hooks:226:14)
       at Test.run (node:internal/test_runner/test:1201:25)
       at Test.start (node:internal/test_runner/test:1096:17)
@@ -55,7 +55,7 @@ test at test/unit/tariff.test.js:64:1
   
   1 !== 2
   
-      at TestContext.<anonymous> (file:///Users/fyfar/projects/ai_training/ws12-d-repro/app/test/unit/tariff.test.js:66:10)
+      at TestContext.<anonymous> (file:///<копія>/app/test/unit/tariff.test.js:66:10)
       at Test.runInAsyncScope (node:async_hooks:226:14)
       at Test.run (node:internal/test_runner/test:1201:25)
       at Test.processPendingSubtests (node:internal/test_runner/test:831:18)

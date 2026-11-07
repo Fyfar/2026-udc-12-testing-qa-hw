@@ -55,7 +55,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   "fees": [],
   "total": 2500
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -99,7 +99,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   "fees": [],
   "total": 30000
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -145,7 +145,7 @@ node -e 'import("./app/src/tariff.js").then(({ quote }) => console.log(JSON.stri
 - **Тест «з коду», що закріпив дефект:** `ai-runs/b1-from-code/tariff.test.js › minutes are rounded
   to the nearest minute`. На `main` він зелений (`ai-runs/b1-run.txt:26`), після виправлення
   червоний (`ai-runs/b1-rerun.txt:26`). Тобто він стверджував хибну поведінку, а не знайшов її.
-- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:24` —
+- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:24` (на `51a43e7`) —
   «a ride of 30 min 20 s is billed as one block» (очікував 30 хв / 2 500 коп.). У коміті `51a43e7`
   його перейменовано на «a ride of 30 min 20 s is billed as two blocks», а очікування змінено на
   31 хв / 5 000 коп. за T1 (`docs/spec/tariffs.md:45-47`).

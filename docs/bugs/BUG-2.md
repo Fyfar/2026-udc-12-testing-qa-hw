@@ -47,7 +47,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   "fees": [],
   "total": 2500
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):

@@ -73,7 +73,7 @@ dayKey: 2026-09-16
   "total": 0
 }
 chargedOn 2026-09-16: 30000 | 2026-09-17: 0
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -127,7 +127,7 @@ cd ../ws12-main && node -e 'import("./app/src/day-cap.js").then(({ dayKey }) => 
 2026-11-17T00:00:00+02:00 -> 2026-11-16
 2026-11-17T01:59:59+02:00 -> 2026-11-16
 2026-11-17T02:00:00+02:00 -> 2026-11-17
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):

@@ -66,7 +66,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   ],
   "total": 8750
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -129,7 +129,7 @@ cd ../ws12-main && node -e 'import("./app/src/tariff.js").then(({ quote }) => co
   ],
   "total": 130000
 }
-/Users/fyfar/projects/ai_training/2026-udc-12-testing-qa-hw
+(корінь репо — вивід cd -)
 ```
 
 Після виправлення — корінь репо (HEAD `b115710`):
@@ -178,7 +178,7 @@ node -e 'import("./app/src/tariff.js").then(({ quote }) => console.log(JSON.stri
   fees` і `ai-runs/b1-from-code/tariff.test.js › concession subscriber gets halved fees only when the
   reduced plan wins`. На `main` вони зелені (`ai-runs/b1-run.txt:70`, `:72`), після виправлення
   червоні (`ai-runs/b1-rerun.txt:70`, `:72`).
-- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:51` —
+- **Наявний unit-тест стверджував хибну поведінку:** `app/test/unit/tariff.test.js:51` (на `eef52eb`) —
   «reduced fare for a ride returned outside the zone». У коміті `eef52eb` очікування змінено:
   `total` 10 000 → 17 500, `fees[0].amount` 7 500 → 15 000 за T5 (`:86-87`).
 - **Місце в коді (гіпотезу підтвердив коміт виправлення):** `app/src/tariff.js:63-65` на `main` —

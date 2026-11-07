@@ -39,6 +39,7 @@ const cases = [
   { id: "TC-24", rule: "T4", title: "абонент, електро, 45 хв — безкоштовних хвилин немає, −20 %",
     rider: SUBSCRIBER, ride: ride(at("10:00:00"), at("10:45:00"), { bike: "ebike" }),
     expected: { minutes: 45, timeCharge: 8000, discounts: { subscription: 1600 }, total: 6400 } },
+  { id: "TC-68", rule: "T4", title: "абонент, електро, 31 хв — 2 блоки −20 % (без безкоштовних хвилин)", rider: SUBSCRIBER, ride: ride(at("10:00:00"), at("10:31:00"), { bike: "ebike" }), expected: { minutes: 31, timeCharge: 8000, discounts: { subscription: 1600 }, total: 6400 } },
 
   // T5: пільговий; абонент з правом на пільгу
   { id: "TC-26", rule: "T5", title: "пільговий, класичний, 40 хв — −50 %",
