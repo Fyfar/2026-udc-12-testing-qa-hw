@@ -55,7 +55,7 @@
 | `app/test/unit/tariff.test.js` › `subscribers ride the first 45 minutes free` | абонент, 40 хв — 0 на класичному і на електро | `docs/spec/tariffs.md:74-77`: безкоштовні 45 хв — лише класичний; електро — −20 % | назву → `… on a classic bike only`; для електро 6 400 коп. (2 блоки 8 000 − 20 %), для класичного — 0, як і було (`d373a24`) |
 | `app/test/unit/tariff.test.js` › `reduced fare for a ride returned outside the zone` | пільговий, 40 хв, X01: разом 10 000, збір 7 500 | `docs/spec/tariffs.md:86-87`: пільга не поширюється на збори | разом 17 500 (2 500 + 15 000), збір 15 000 (`eef52eb`) |
 
-Жоден тест не видалено й не послаблено; виправлення T2 (`fb84387`) і T6 (`b115710`)
+У таблиці — лише тести, що почервоніли після виправлень Task B. Пізніші зміни `app/test/unit/` (`day-cap.test.js`, `receipt-format.test.js`, `server.test.js`, ще частина `tariff.test.js`) — це посилення тестів у Task C і після аудиту, а не реакція на виправлення: їх перелічено в `docs/test-quality.md` (розділи 2–3, `ai-runs/c-strengthen.diff`). Жоден тест не видалено й не послаблено; виправлення T2 (`fb84387`) і T6 (`b115710`)
 наявних unit-тестів не зачепили (`git diff 30315a2..b115710 -- app/test/unit`).
 
 ## Тести з коду після виправлення (`ai-runs/b1-rerun.txt`)

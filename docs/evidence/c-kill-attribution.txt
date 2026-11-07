@@ -7,4 +7,4 @@ M039 | ℹ pass 103 ℹ fail 1  | FAILED: ✖ a subscriber's 31-minute e-bike ri
 M067 | ℹ pass 103 ℹ fail 1  | FAILED: ✖ a null ride is rejected with a QuoteError, not a TypeError;
 M078 | ℹ pass 103 ℹ fail 1  | FAILED: ✖ a pickupAt that is not a string is rejected even if it stringifies to a valid date;
 M086 | ℹ pass 103 ℹ fail 1  | FAILED: ✖ nothing is charged on a day with no rides;
-M018 | ℹ pass 104 ℹ fail 0  | FAILED: 
+M018 | ℹ pass 104 ℹ fail 0  | ВИЖИВ: жоден тест не впав (Q-12, docs/test-quality.md, розділ 4)
