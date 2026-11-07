@@ -89,3 +89,33 @@ test("a 45-minute classic ride costs 50 UAH", () => {
 test("a return before the pickup is rejected", () => {
   assert.throws(() => quote(ride("2026-09-16T08:00:00Z", "2026-09-16T07:00:00Z"), standard), QuoteError);
 });
+
+// --- Strengthened after the mutation run (Task C) ---
+
+test("a ride that starts at 06:30 in Kyiv gets no night discount (T10: 00:00–06:00)", () => {
+  // 06:30–06:50 Kyiv lies wholly outside the night window
+  const result = quote(ride("2026-09-17T06:30:00+03:00", "2026-09-17T06:50:00+03:00"), standard);
+  assert.deepEqual(result.discounts, []);
+  assert.equal(result.total, 2500);
+});
+
+test("a subscriber's 31-minute e-bike ride is billed from the first minute: 2 blocks − 20 %", () => {
+  // T4: no free minutes on an e-bike — 31 min = 2 blocks = 8000 − 20 % = 6400
+  const result = quote(ride("2026-09-16T07:00:00Z", "2026-09-16T07:31:00Z", { bike: "ebike" }), { type: "subscriber" });
+  assert.equal(result.timeCharge, 8000);
+  assert.deepEqual(result.discounts, [{ code: "subscription", amount: 1600 }]);
+  assert.equal(result.total, 6400);
+});
+
+test("a null ride is rejected with a QuoteError, not a TypeError", () => {
+  assert.throws(() => quote(null, standard), QuoteError);
+  assert.throws(() => quote(undefined, standard), QuoteError);
+});
+
+test("a pickupAt that is not a string is rejected even if it stringifies to a valid date", () => {
+  // e.g. a JSON body with ["2026-09-16T07:00:00Z"] — String([x]) === x
+  const asArray = { ...ride("2026-09-16T07:00:00Z", "2026-09-16T07:20:00Z"), pickupAt: ["2026-09-16T07:00:00Z"] };
+  assert.throws(() => quote(asArray, standard), QuoteError);
+  const asObject = { ...ride("2026-09-16T07:00:00Z", "2026-09-16T07:20:00Z"), returnAt: { toString: () => "2026-09-16T07:20:00Z" } };
+  assert.throws(() => quote(asObject, standard), QuoteError);
+});
